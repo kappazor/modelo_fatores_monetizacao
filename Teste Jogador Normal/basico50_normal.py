@@ -1265,3 +1265,4 @@ def basico50f2p_ic_inferior():
 def basico50f2p_erro():
     basico50f2p_yerr = round(basico50f2p_ic_superior() - basico50f2p_media(), 2)
     return basico50f2p_yerr
+

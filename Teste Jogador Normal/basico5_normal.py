@@ -176,3 +176,4 @@ def basico5f2p_ic_inferior():
 def basico5f2p_erro():
     basico5f2p_yerr = round(basico5f2p_ic_superior() - basico5f2p_media(), 2)
     return basico5f2p_yerr
+

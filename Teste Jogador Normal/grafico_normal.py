@@ -2,7 +2,7 @@
 # Departamento de Ciência da Computação
 # TCC
 # Rodrigo da Silva Navarro - 15/0147376
-# Código do Modelo Básico de um Jogo Gacha
+# Código do Teste de Qtd. Níveis para Jogador Normal
 #
 #
 #
@@ -10,14 +10,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # import dos arquivos.py do projeto
-import basico5_f2p as b5f2p
-import completo5_f2p as c5f2p
-import basico10_f2p as b10f2p
-import completo10_f2p as c10f2p
-import basico25_f2p as b25f2p
-import completo25_f2p as c25f2p
-import basico50_f2p as b50f2p
-import completo50_f2p as c50f2p
+import basico5_normal as b5f2p
+import completo5_normal as c5f2p
+import basico10_normal as b10f2p
+import completo10_normal as c10f2p
+import basico25_normal as b25f2p
+import completo25_normal as c25f2p
+import basico50_normal as b50f2p
+import completo50_normal as c50f2p
 
 # chamada das funções que geram a lista para cada nível, do Modelo Básico e do Completo
 b5f2p.basico5f2p_lista()
@@ -48,8 +48,8 @@ def graph():
     bar2 = [i + w for i in bar1]
 
     # configurações das barras
-    plt.bar(bar1, básico, w, color='green', edgecolor='black', yerr=yer1, capsize=3, label="Modelo Básico")
-    plt.bar(bar2, completo, w, color='blue', edgecolor='black', yerr=yer2, capsize=3, label="Modelo Completo")
+    plt.bar(bar1, básico, w, color='green', edgecolor='black', yerr=yer1, capsize=3, label="Modelo Base")
+    plt.bar(bar2, completo, w, color='blue', edgecolor='black', yerr=yer2, capsize=3, label="Modelo Híbrido")
 
     plt.xlabel("Qtd Total de Níveis")
     plt.ylabel("Game Over")
