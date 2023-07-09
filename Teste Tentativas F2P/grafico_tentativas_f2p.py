@@ -2,7 +2,7 @@
 # Departamento de Ciência da Computação
 # TCC
 # Rodrigo da Silva Navarro - 15/0147376
-# Código do Modelo Padrão de um Jogo Gacha
+# Teste de Variadas Tentativas para o Jogador F2P
 #
 #
 #
