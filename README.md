@@ -1,5 +1,5 @@
-# tcc
-pastas de vários codigos de testes do tcc
+# Testes de Fatores de Monetização
+pastas com os vários codigos de testes realizados
 
 - para executar os gráficos presentes na monografia, basta compilar e executar o arquivo "grafico" de cada teste.
 - precisa baixar e importar os módulos numpy, matplotlib, random e statistics
