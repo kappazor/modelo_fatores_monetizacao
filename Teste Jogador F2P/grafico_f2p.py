@@ -2,7 +2,7 @@
 # Departamento de Ciência da Computação
 # TCC
 # Rodrigo da Silva Navarro - 15/0147376
-# Código do Modelo Básico de um Jogo Gacha
+# Teste Qtd. Níveis para Jogador F2P
 #
 #
 #
