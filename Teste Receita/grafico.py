@@ -41,5 +41,5 @@ def graph():
 
 
 graph()
-print(db.receita_total())
-print(dc.receita_total())
+# print(db.receita_total())
+# print(dc.receita_total())
