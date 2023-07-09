@@ -19,7 +19,7 @@ import completo25_f2p as c25f2p
 import basico50_f2p as b50f2p
 import completo50_f2p as c50f2p
 
-# chamada das funções que geram a lista para cada nível, do Modelo Básico e do Completo
+# chamada das funções que geram a lista para cada nível, do Modelo Base e do Híbrido
 b5f2p.basico5f2p_lista()
 c5f2p.completo5f2p_lista()
 b10f2p.basico10f2p_lista()
