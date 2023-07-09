@@ -9,14 +9,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# import dos arquivos para o modelo básico
+# import dos arquivos para o modelo base
 import basico1tentativa_f2p as b1
 import basico2tentativas_f2p as b2
 import basico3tentativas_f2p as b3
 import basico10tentativas_f2p as b10
 import basico20tentativas_f2p as b20
 
-# import dos arquivos para o modelo completo
+# import dos arquivos para o modelo hibrido
 import completo1tentativa_f2p as c1
 import completo2tentativas_f2p as c2
 import completo3tentativas_f2p as c3
@@ -66,8 +66,8 @@ def graph():
     plt.show()
 
 
-print(c1.f_erro())
-print(c1.f_media())
-print(c1.f_ic_inferior())
-print(c1.f_ic_superior())
+# print(c1.f_erro())
+# print(c1.f_media())
+# print(c1.f_ic_inferior())
+# print(c1.f_ic_superior())
 graph()
