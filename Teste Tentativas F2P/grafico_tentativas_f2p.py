@@ -9,35 +9,65 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from padrao1tentativa_f2p import padrao1f2p
-from proposto1tentativa_f2p import proposto1f2p
-from padrao2tentativas_f2p import padrao2f2p
-from proposto2tentativas_f2p import proposto2f2p
-from padrao3tentativas_f2p import padrao3f2p
-from proposto3tentativas_f2p import proposto3f2p
-from padrao10tentativas_f2p import padrao10tentativasf2p
-from proposto10tentativas_f2p import proposto10tentativasf2p
-from padrao20tentativas_f2p import padrao20tentativasf2p
-from proposto20tentativas_f2p import proposto20tentativasf2p
+# import dos arquivos para o modelo básico
+import basico1tentativa_f2p as b1
+import basico2tentativas_f2p as b2
+import basico3tentativas_f2p as b3
+import basico10tentativas_f2p as b10
+import basico20tentativas_f2p as b20
+
+# import dos arquivos para o modelo completo
+import completo1tentativa_f2p as c1
+import completo2tentativas_f2p as c2
+import completo3tentativas_f2p as c3
+import completo10tentativas_f2p as c10
+import completo20tentativas_f2p as c20
+
+# chamada das funções que geram a lista
+b1.f_lista()
+b2.f_lista()
+b3.f_lista()
+b10.f_lista()
+b20.f_lista()
+
+c1.f_lista()
+c2.f_lista()
+c3.f_lista()
+c10.f_lista()
+c20.f_lista()
 
 
 def graph():
+    # largura das barras
     w = 0.3
-    x = ["1", "2", "3", "...", "10", "...", "20"]
-    padrão = [padrao1f2p(), padrao2f2p(), padrao3f2p(), 0, padrao10tentativasf2p(), 0, padrao20tentativasf2p()]
-    proposto = [proposto1f2p(), proposto2f2p(), proposto3f2p(), 0, proposto10tentativasf2p(), 0, proposto20tentativasf2p()]
+    # quantidade de tentativas por nível em cada valor do eixo X
+    x = ["1", "2", "3", "10", "20"]
+
+    # valores das médias de nível de Game Over
+    basico = [b1.f_media(), b2.f_media(), b3.f_media(), b10.f_media(), b20.f_media()]
+    completo = [c1.f_media(), c2.f_media(), c3.f_media(), c10.f_media(),
+                c20.f_media()]
+
+    # intervalo de confiança para 99% de confiabilidade
+    yer1 = [b1.f_erro(), b2.f_erro(), b3.f_erro(), b10.f_erro(), b20.f_erro()]
+    yer2 = [c1.f_erro(), c2.f_erro(), c3.f_erro(), c10.f_erro(), c20.f_erro()]
 
     bar1 = np.arange(len(x))
     bar2 = [i + w for i in bar1]
 
-    plt.bar(bar1, padrão, w, label="Modelo Padrão")
-    plt.bar(bar2, proposto, w, label="Modelo Proposto")
+    plt.bar(bar1, basico, width=w, color='green', edgecolor='black', yerr=yer1, capsize=3, label="Modelo Base")
+    plt.bar(bar2, completo, width=w, color='blue', edgecolor='black', yerr=yer2, capsize=3, label="Modelo Híbrido")
 
     plt.xlabel("Número de Tentativas por Nível")
     plt.ylabel("Game Over")
-    plt.title("Jogador Normal")
+    plt.title("Jogador F2P")
     plt.xticks(bar1 + w / 2, x)
     plt.legend()
     plt.show()
 
+
+print(c1.f_erro())
+print(c1.f_media())
+print(c1.f_ic_inferior())
+print(c1.f_ic_superior())
 graph()
