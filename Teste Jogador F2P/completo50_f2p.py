@@ -1283,3 +1283,5 @@ def completo50f2p_ic_inferior():
 def completo50f2p_erro():
     completo50f2p_yerr = round(completo50f2p_ic_superior() - completo50f2p_media(), 2)
     return completo50f2p_yerr
+
+

@@ -177,3 +177,5 @@ def completo5f2p_ic_inferior():
 def completo5f2p_erro():
     completo5f2p_yerr = round(completo5f2p_ic_superior() - completo5f2p_media(), 2)
     return completo5f2p_yerr
+
+

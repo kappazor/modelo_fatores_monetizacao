@@ -667,3 +667,5 @@ def basico25f2p_ic_inferior():
 def basico25f2p_erro():
     basico25f2p_yerr = round(basico25f2p_ic_superior() - basico25f2p_media(), 2)
     return basico25f2p_yerr
+
+

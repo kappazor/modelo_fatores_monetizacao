@@ -48,8 +48,8 @@ def graph():
     bar2 = [i + w for i in bar1]
 
     # configurações das barras
-    plt.bar(bar1, básico, w, color='green', edgecolor='black', yerr=yer1, capsize=3, label="Modelo Básico")
-    plt.bar(bar2, completo, w, color='blue', edgecolor='black', yerr=yer2, capsize=3, label="Modelo Completo")
+    plt.bar(bar1, básico, w, color='green', edgecolor='black', yerr=yer1, capsize=3, label="Modelo Base")
+    plt.bar(bar2, completo, w, color='blue', edgecolor='black', yerr=yer2, capsize=3, label="Modelo Híbrido")
 
     plt.xlabel("Qtd Total de Níveis")
     plt.ylabel("Game Over")

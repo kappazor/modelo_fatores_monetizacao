@@ -310,3 +310,4 @@ def completo10f2p_ic_inferior():
 def completo10f2p_erro():
     completo10f2p_yerr = round(completo10f2p_ic_superior() - completo10f2p_media(), 2)
     return completo10f2p_yerr
+
