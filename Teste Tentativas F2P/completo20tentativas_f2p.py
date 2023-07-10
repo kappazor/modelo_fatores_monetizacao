@@ -2,7 +2,7 @@
 # Departamento de Ciência da Computação
 # TCC
 # Rodrigo da Silva Navarro - 15/0147376
-# Código do Modelo Padrão de um Jogo Gacha
+# Teste de 20 Tentativas por nível, no Modelo Híbrido
 #
 #
 #
@@ -1254,11 +1254,13 @@ def f_lista():
     return mortes
 
 
+# função que calcula a média da lista mortes
 def f_media():
     media = round(statistics.mean(mortes), 2)
     return media
 
 
+# função que calcula o desvio padrão da lista mortes
 def f_dp():
     for morte in mortes:
         mortes_dp.append((morte - f_media()) ** 2)
@@ -1268,6 +1270,7 @@ def f_dp():
     return dp
 
 
+# função que calcula o limite superior do intervalo de confiança, ou seja, media + erro
 def f_ic_superior():
     x = f_media()
     o = f_dp()
@@ -1276,6 +1279,7 @@ def f_ic_superior():
     return lim_superior
 
 
+# função que calcula o limite superior do intervalo de confiança, ou seja, media - erro
 def f_ic_inferior():
     x = f_media()
     o = f_dp()
@@ -1284,6 +1288,7 @@ def f_ic_inferior():
     return lim_inferior
 
 
+# função que calcula o erro
 def f_erro():
     erro = round(f_ic_superior() - f_media(), 2)
     return erro
