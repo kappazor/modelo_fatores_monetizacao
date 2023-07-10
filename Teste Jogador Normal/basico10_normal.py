@@ -261,11 +261,13 @@ def basico10f2p_lista():
     return mortes
 
 
+# função que calcula a média da lista mortes
 def basico10f2p_media():
     media = round(statistics.mean(mortes), 2)
     return media
 
 
+# função que calcula o desvio padrão da lista mortes
 def basico10f2p_dp():
     for morte in mortes:
         mortes_dp.append((morte - basico10f2p_media()) ** 2)
@@ -275,6 +277,7 @@ def basico10f2p_dp():
     return dp
 
 
+# função que calcula o limite superior do intervalo de confiança, ou seja, media + erro
 def basico10f2p_ic_superior():
     x = basico10f2p_media()
     o = basico10f2p_dp()
@@ -283,6 +286,7 @@ def basico10f2p_ic_superior():
     return basico10f2p_lim_superior
 
 
+# função que calcula o limite superior do intervalo de confiança, ou seja, media - erro
 def basico10f2p_ic_inferior():
     x = basico10f2p_media()
     o = basico10f2p_dp()
@@ -291,6 +295,7 @@ def basico10f2p_ic_inferior():
     return basico10f2p_lim_inferior
 
 
+# função que calcula o erro
 def basico10f2p_erro():
     basico10f2p_yerr = round(basico10f2p_ic_superior() - basico10f2p_media(), 2)
     return basico10f2p_yerr
