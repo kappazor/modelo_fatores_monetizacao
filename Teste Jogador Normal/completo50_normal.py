@@ -2,7 +2,7 @@
 # Departamento de Ciência da Computação
 # TCC
 # Rodrigo da Silva Navarro - 15/0147376
-# Código do Modelo Padrão de um Jogo Gacha
+# Código do Modelo Híbrido de um Jogo Gacha, para 50 Jogadores Normais
 #
 #
 #
@@ -1250,11 +1250,13 @@ def completo50f2p_lista():
     return mortes
 
 
+# função que calcula a média da lista mortes
 def completo50f2p_media():
     media = round(statistics.mean(mortes), 2)
     return media
 
 
+# função que calcula o desvio padrão da lista mortes
 def completo50f2p_dp():
     for morte in mortes:
         mortes_dp.append((morte - completo50f2p_media()) ** 2)
@@ -1264,6 +1266,7 @@ def completo50f2p_dp():
     return dp
 
 
+# função que calcula o limite superior do intervalo de confiança, ou seja, media + erro
 def completo50f2p_ic_superior():
     x = completo50f2p_media()
     o = completo50f2p_dp()
@@ -1272,6 +1275,7 @@ def completo50f2p_ic_superior():
     return completo50f2p_lim_superior
 
 
+# função que calcula o limite superior do intervalo de confiança, ou seja, media - erro
 def completo50f2p_ic_inferior():
     x = completo50f2p_media()
     o = completo50f2p_dp()
@@ -1280,6 +1284,7 @@ def completo50f2p_ic_inferior():
     return completo50f2p_lim_inferior
 
 
+# função que calcula o erro
 def completo50f2p_erro():
     completo50f2p_yerr = round(completo50f2p_ic_superior() - completo50f2p_media(), 2)
     return completo50f2p_yerr
